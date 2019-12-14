@@ -20,12 +20,12 @@
 	<package abstract="true" name="default" namespace="/"
 		extends="struts-default">
 		<interceptors>
-			<interceptor name="authorityInterceptor"
-				class="com.fzu.interceptor.AuthInterceptor">
-			</interceptor>
+<!--			<interceptor name="authorityInterceptor"-->
+<!--				class="com.fzu.interceptor.AuthInterceptor">-->
+<!--			</interceptor>-->
 			<interceptor-stack name="auth-dafault">
 				<interceptor-ref name="defaultStack" />
-				<interceptor-ref name="authorityInterceptor" />
+<!--				<interceptor-ref name="authorityInterceptor" />-->
 			</interceptor-stack>
 		</interceptors>
 		<default-interceptor-ref name="auth-dafault" />
@@ -38,6 +38,24 @@
 			<exception-mapping exception="java.lang.Exception"
 				result="error" />
 		</global-exception-mappings> 
+	</package>
+
+
+	<package name="user" namespace="/user" extends="default">
+		<!-- sping 当中的id -->
+		<action name="*User" class="userAction" method="{1}">
+			<result name="list">/admin/listUser.jsp</result>
+			<result type="redirect" name="register">/register.jsp</result>
+			<result type="redirect" name="login">/login.jsp</result>
+			<result type="chain" name="success">listUser</result>
+			<result type="redirect" name="index">/index.jsp</result>
+			<!--允许通过通配符访问的方法-->
+			<allowed-methods>list,login,register,reset</allowed-methods>
+		</action>
+
+		<action name="*">   <!-- 用于处理链接jsp页面请求 -->
+			<result>/admin/{1}.jsp</result>
+		</action>
 	</package>
 
 

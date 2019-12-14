@@ -20,15 +20,17 @@
     <import resource="hibernateApplication.xml"/>
 
 	<!-- action scope="prototype"-->
-<!--	<bean id="userAction" class="edu.fzu.tmall.action.UserAction" scope="prototype"></bean>-->
+	<bean id="userAction" class="com.fzu.action.UserAction" scope="prototype"></bean>
 <!--	-->
 <!--	<bean id="productAction" class="edu.fzu.tmall.action.ProductAction" scope="prototype"></bean>-->
 <!--	-->
 <!--	<bean id="orderAction" class="edu.fzu.tmall.action.OrderAction" scope="prototype"></bean>-->
-	
-	
+
+    <!--service-->
+    <bean id="userService" class="com.fzu.service.UserServiceImpl"></bean>
+
 	<!-- dao -->
-<!--	<bean id="userDAO" class="edu.fzu.tmall.dao.UserDAOHibImpl"></bean>-->
+	<bean id="userDao" class="com.fzu.dao.UserDAOHibImpl"></bean>
 <!--	<bean id="productDAO" class="edu.fzu.tmall.dao.ProductDAOHibImpl"></bean>-->
 <!--	<bean id="orderDAO" class="edu.fzu.tmall.dao.CategoryDAOHibImpl"></bean>-->
 	
