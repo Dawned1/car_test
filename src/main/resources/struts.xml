@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<!-- 	-->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<!-- 配置文件修改了，不需要重启服务器 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- jsp中不使用struts的样式 -->
+	<constant name="struts.ui.theme" value="simple" />
+	
+	<!-- struts中自动根据名字调用sping生成bean -->
+	<constant name="struts.objectFactory" value="spring" />
+	
+	 
+	<package abstract="true" name="default" namespace="/"
+		extends="struts-default">
+		<interceptors>
+			<interceptor name="authorityInterceptor"
+				class="com.fzu.interceptor.AuthInterceptor">
+			</interceptor>
+			<interceptor-stack name="auth-dafault">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authorityInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="auth-dafault" />
+		
+		<global-results>
+			<result name="error">/error.jsp</result>
+			<result type="redirect" name="login">/login.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings> 
+	</package>
+
+
+
+
+
+</struts>
