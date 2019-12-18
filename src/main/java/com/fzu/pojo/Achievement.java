@@ -22,9 +22,6 @@ public class Achievement {
     @Column(name = "scoreResult")
     private float score;
 
-    @Column(name = "completionResult")
-    private float completionScore;
-
     @Column(name = "judgementResult")
     private float judgementScore;
 
