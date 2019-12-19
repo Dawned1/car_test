@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: lenovo
-  Date: 2019/12/18
-  Time: 23:07
+  Date: 2019/12/19
+  Time: 22:49
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,7 +13,7 @@
 <html>
 <head>
     <base href="<%=basePath%>">
-    <title>修改用户信息</title>
+    <title>更改用户2</title>
     <script language="javascript" src="js/Calendar.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
     <script type="text/javascript">
@@ -33,7 +33,7 @@
     {
         if(document.form1.username.value==""){
             alert("请输入用户名");
-            document.form1.username.focus();
+            document.form1.xuehao.focus();
             return false;
         }if(document.form1.pwd.value==""){
             alert("请输入密码");
@@ -45,7 +45,7 @@
             return false;
         }if(document.form1.id_card.value==""){
             alert("请输入身份证");
-            document.form1.d_card.focus();
+            document.form1.id_card.focus();
             return false;
         }if(document.form1.phone.value==""){
             alert("请输入电话");
@@ -55,14 +55,11 @@
     }
 </script>
 <body >
-<%
-    String id=request.getParameter("id");
-%>
-<form name="form1" id="form1" method="post" action="user_updt_post.jsp?id=<%=id %>">
-    修改考生:
-    <br><br>
+
+<form name="form1" id="form1" method="post" action="user_update_post2.jsp">
+    修改考生:<br><br>
     <%
-        String sql="select * from users where id="+id;
+        String sql="select * from users where username='"+request.getSession().getAttribute("username")+"'";
         String username="";
         String pwd="";
         String name="";
@@ -71,8 +68,8 @@
         String email="";
         String phone="";
         String adress="";
-//        ResultSet RS_result=connDbBean.executeQuery(sql);
-//        while(RS_result.next()){
+//            ResultSet RS_result=connDbBean.executeQuery(sql);
+//            while(RS_result.next()){
 //            username=RS_result.getString("username");
 //            pwd=RS_result.getString("pwd");
 //            name=RS_result.getString("name");
@@ -147,5 +144,6 @@
         </tr>
     </table>
 </form>
+
 </body>
 </html>

@@ -19,10 +19,10 @@ public class Multiplechoice {
     private int id;
 
     @Column(name = "topicId")
-    private int topicId;
+    private int id_num;
 
     @Column(name = "text")
-    private String textContent;
+    private String question;
 
     @Column(name = "optionA")
     private String opa;
@@ -37,11 +37,11 @@ public class Multiplechoice {
     private String opd;
 
     @Column(name = "difficulty")
-    private int mulDifficulty;
+    private int difficult;
 
     @Column(name = "createdTime")
-    private Date mulCreatedTime;
+    private Date createdTime;
 
     @Column(name = "updatedTime")
-    private Date mulUpdatedTime;
+    private Date updatedTime;
 }

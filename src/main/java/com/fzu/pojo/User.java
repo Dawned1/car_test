@@ -20,10 +20,10 @@ public class User {
     private int id;
 
     @Column(name = "username")
-    private String userName;
+    private String username;
 
     @Column(name = "pwd")
-    private String password;
+    private String pwd;
 
     @Column(name = "fullName")
     private String name;
@@ -32,13 +32,13 @@ public class User {
     private String sex;
 
     @Column(name = "cardID")
-    private  String cardId;
+    private  String id_card;
 
     @Column(name = "mail")
     private  String email;
 
     @Column(name = "phone")
-    private  String phoneNumber;
+    private  String phone;
 
     @Column(name = "address")
     private  String address;
@@ -47,8 +47,8 @@ public class User {
     private  int role;
 
     @Column(name = "createdTime")
-    private Date userCreatedTime;
+    private Date createdTime;
 
     @Column(name = "updatedTime")
-    private Date userUpdatedTime;
+    private Date updatedTime;
 }

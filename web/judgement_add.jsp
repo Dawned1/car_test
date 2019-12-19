@@ -28,21 +28,24 @@
         }
     </script>
 </head>
-<%--<script language="javascript">--%>
-<%--    function check()--%>
-<%--    {--%>
-<%--        if(document.form1.bianhao.value==""){alert("请输入编号");--%>
-<%--        document.form1.bianhao.focus();--%>
-<%--        return false;}if(document.form1.daan.value==""){--%>
-<%--            alert("请输入答案");document.form1.daan.focus();--%>
-<%--            return false;--%>
-<%--        }--%>
-<%--    }--%>
-<%--    function gow()--%>
-<%--    {--%>
-<%--        document.location.href="judgement_add.jsp?jihuabifffanhao="+document.form1.jihuabifffanhao.value;--%>
-<%--    }--%>
-<%--</script>--%>
+<script language="javascript">
+    function check()
+    {
+        if(document.form1.id_num.value==""){
+            alert("请输入编号");
+            document.form1.id_num.focus();
+            return false;
+        }if(document.form1.answer.value==""){
+            alert("请输入答案");
+            document.form1.answer.focus();
+            return false;
+        }
+    }
+    function gow()
+    {
+        document.location.href="judgement_add.jsp?jihuabifffanhao="+document.form1.jihuabifffanhao.value;
+    }
+</script>
 <body >
 <form name="form1" id="form1" method="post" action="judgement_add_post.jsp">
     添加判断题:<br><br>
@@ -76,13 +79,12 @@
                     <option value="对">对</option>
                     <option value="错">错</option>
                 </select>
-                &nbsp;*
             </td>
     </tr>
         <tr>
             <td>&nbsp;</td>
-            <td><input type="submit" class="Submit" value="提交" onClick="return check();" />
-                <input type="reset" class="Submit2" value="重置" /></td>
+            <td><input type="submit" name="Submit" class="Submit" value="提交" onClick="return check();" />
+                <input type="reset" name="Submit2" class="Submit2" value="重置" /></td>
         </tr>
     </table>
 </form>

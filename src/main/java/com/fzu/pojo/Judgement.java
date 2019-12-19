@@ -19,17 +19,17 @@ public class Judgement {
     private int id;
 
     @Column(name = "topicId")
-    private int topicId;
+    private int id_num;
 
     @Column(name = "text")
-    private String textContent;
+    private String question;
 
     @Column(name = "difficulty")
-    private int judDifficulty;
+    private int difficult;
 
     @Column(name = "createdTime")
-    private Date judCreatedTime;
+    private Date createdTime;
 
     @Column(name = "updatedTime")
-    private Date judUpdatedTime;
+    private Date updatedTime;
 }

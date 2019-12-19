@@ -17,7 +17,7 @@ public class Achievement {
     private int id;
 
     @Column(name = "testPaperId")
-    private int testPaper;
+    private int testPaper_id;
 
     @Column(name = "scoreResult")
     private float score;

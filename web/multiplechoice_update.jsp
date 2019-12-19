@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: lenovo
-  Date: 2019/12/18
-  Time: 18:03
+  Date: 2019/12/19
+  Time: 13:22
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,8 +13,7 @@
 <html>
 <head>
     <base href="<%=basePath%>">
-    <title>多选题添加</title>
-    <LINK href="css/style.css" type=text/css rel=stylesheet>
+    <title>修改多选题</title>
     <script language="javascript" src="js/Calendar.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
     <script type="text/javascript">
@@ -27,6 +26,7 @@
             pop.show();
         }
     </script>
+    <link href="css/style.css" type=text/css rel=stylesheet>
 </head>
 <script language="javascript">
     function check()
@@ -53,25 +53,48 @@
             return false;
         }
     }
-    function gow()
-    {
-        document.location.href="multiplechoice_add.jsp?jihuabifffanhao="+document.form1.jihuabifffanhao.value;
-    }
 </script>
 <body >
-<form name="form1" id="form1" method="post" action="multiplechoice_add_post.jsp">
-    添加多选题:<br><br>
+<%
+    String id=request.getParameter("id");
+%>
+<form name="form1" id="form1" method="post" action="multiplechoice_update_post.jsp?id=<%=id %>">
+    修改多选题:<br><br>
+    <%
+        String sql="select * from  multiplechoice where id="+id;
+        String id_num="";
+        String question="";
+        String difficult="";
+        String opa="";
+        String opb="";
+        String opc="";
+        String opd="";
+        String answer="";
+//        ResultSet RS_result=connDbBean.executeQuery(sql);
+//        while(RS_result.next()){
+//            id_num=RS_result.getString("id_num");
+//            question=RS_result.getString("question");
+//            difficult=RS_result.getString("difficult");
+//            opa=RS_result.getString("opa");
+//            opb=RS_result.getString("opb");
+//            opc=RS_result.getString("opc");
+//            opd=RS_result.getString("opd");
+//            answer=RS_result.getString("answer");
+//        }
+    %>
     <table width="100%" border="2" align="center" cellpadding="6" cellspacing="3" bordercolor="SkyBlue" style="border-collapse:collapse">
         <tr>
             <td>编号：</td>
             <td>
-                <input name='id_num' type='text' id='id_num' value='' />&nbsp;*
+                <input name='id_num' type='text' id='id_num' value='<%= id_num%>' />
             </td>
         </tr>
         <tr>
             <td>试题：</td>
             <td>
-                <textarea name="question" style="display:none"></textarea>
+                <textarea name="question" style="display:none">
+                    <%=question%>
+                </textarea>
                 <iframe ID="eWebEditor1" src="eWebEditor_V4.60/ewebeditor.htm?id=question&style=coolblue" frameborder="0" scrolling="no" width="600" HEIGHT="350"></iframe>
             </td>
         </tr>
@@ -85,41 +108,42 @@
                 </select>
             </td>
         </tr>
+        <script language="javascript">document.form1.difficult.value='<%=difficult%>';
+        </script>
         <tr>
             <td>选项A：</td>
             <td>
-                <input name='opa' type='text' id='opa' value='' size='50' />&nbsp;*
+                <input name='opa' type='text' id='opa' size='50' value='<%=opa%>' />
             </td>
         </tr>
         <tr>
             <td>选项B：</td>
             <td>
-                <input name='opb' type='text' id='opb' value='' size='50' />&nbsp;*
+                <input name='opb' type='text' id='opb' size='50' value='<%=opb%>' />
             </td>
         </tr>
         <tr>
             <td>选项C：</td>
             <td>
-                <input name='opc' type='text' id='opc' value='' size='50' />&nbsp;*
+                <input name='opc' type='text' id='opc' size='50' value='<%=opc%>' />
             </td>
         </tr>
         <tr>
             <td>选项D：</td>
             <td>
-                <input name='opd' type='text' id='opd' value='' size='50' />&nbsp;*
+                <input name='opd' type='text' id='opd' size='50' value='<%=opd%>' />
             </td>
         </tr>
         <tr>
             <td>答案：</td>
             <td>
-                <input name='answer' type='text' id='answer' value='' />
+                <input name='answer' type='text' id='answer' value='<%= answer%>' />
             </td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td><input type="submit" name="Submit" class="Submit" value="提交" onClick="return check();" />
-                <input type="reset" name="Submit2" class="Submit2" value="重置" />
-            </td>
+                <input type="reset" name="Submit2" class="Submit2" value="重置" /></td>
         </tr>
     </table>
 </form>

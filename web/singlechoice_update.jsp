@@ -156,8 +156,8 @@
         </script>
         <tr>
             <td>&nbsp;</td>
-            <td><input type="submit" class="Submit" value="提交" onClick="return check();" />
-                <input type="reset" class="Submit2" value="重置" />
+            <td><input type="submit" name="Submit" class="Submit" value="提交" onClick="return check();" />
+                <input type="reset" name="Submit2" class="Submit2" value="重置" />
             </td>
         </tr>
     </table>

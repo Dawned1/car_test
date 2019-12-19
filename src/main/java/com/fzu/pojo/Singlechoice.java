@@ -19,10 +19,10 @@ public class Singlechoice {
     private int id;
 
     @Column(name = "topicId")
-    private int topicId;
+    private int id_num;
 
     @Column(name = "text")
-    private String textContent;
+    private String question;
 
     @Column(name = "optionA")
     private String opa;
@@ -37,11 +37,11 @@ public class Singlechoice {
     private String opd;
 
     @Column(name = "difficulty")
-    private int sinDifficulty;
+    private int difficulty;
 
     @Column(name = "createdTime")
-    private Date sinCreatedTime;
+    private Date createdTime;
 
     @Column(name = "updatedTime")
-    private Date sinUpdatedTime;
+    private Date updatedTime;
 }

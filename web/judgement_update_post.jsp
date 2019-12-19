@@ -1,0 +1,34 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: lenovo
+  Date: 2019/12/19
+  Time: 18:24
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%
+    request.setCharacterEncoding("utf-8");
+    response.setCharacterEncoding("utf-8");
+%>
+<html>
+<head>
+    <base href="<%=basePath%>">
+    <title>修改判断题跳转页面</title>
+</head>
+<body>
+<%
+    String id_num=request.getParameter("id_num");
+    String question=request.getParameter("question");
+    String difficult=request.getParameter("difficult");
+    String answer=request.getParameter("answer");
+    String id=request.getParameter("id");
+    String sql="update judgement set id_num='"+id_num+"',question='"+question+"',difficult='"+difficult+"',answer='"+answer+"' where id= "+id;
+//    connDbBean.executeUpdate(sql);
+    out.print("<script>alert('修改成功!');location.href='judgement_list.jsp';</script>");
+%>
+</body>
+</html>
