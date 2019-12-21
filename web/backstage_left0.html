@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>后台管理左部界面1</title>
     <style type="text/css">
-        body {
-            margin-left: 0px;
-            margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 0px;
-        }
+        /*body {*/
+        /*    margin-left: 0px;*/
+        /*    margin-top: 0px;*/
+        /*    margin-right: 0px;*/
+        /*    margin-bottom: 0px;*/
+        /*}*/
         img{
             position: relative;
             vertical-align: middle;
@@ -64,7 +64,16 @@
                         <td width="33" height="28"><img src="images/manage.png" width="17" height="17"></td>
                         <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"><a href="yhzhgl.jsp" target="hsgmain">系统用户管理</a></td>
+                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
+                                this.style.borderStyle='solid';
+                                this.style.borderWidth='1px';
+                                borderColor='#adb9c2';
+                                "onmouseout="this.style.backgroundImage='url()';
+                                this.style.borderStyle='none'">
+                                    <a href="yhzhgl.jsp" target="hsgmain">
+                                        系统用户管理
+                                    </a>
+                                </td>
                             </tr>
                         </table></td>
                     </tr>
@@ -74,9 +83,12 @@
         </table></td>
     </tr>
     <tr>
-        <td height="22" valign="top"><table width="100%" border="0" style="CURSOR: pointer" onClick="collapse('g_2')">
+        <td height="22" valign="top">
+            <table width="100%" border="0" style="CURSOR: pointer" onClick="collapse('g_2')">
             <tr>
-                <td height="18" background="images/main_34.gif">&nbsp;&nbsp;&nbsp;&nbsp;<span class="STYLE4">题库管理</span></td>
+                <td height="18" background="images/main_34.gif">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="STYLE4">题库管理</span>
+                </td>
             </tr>
         </table></td>
     </tr>
@@ -88,19 +100,32 @@
                         <td width="33" height="28"><img src="images/add.png" width="20" height="20"></td>
                         <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"><a href="xuanzeti_add.jsp" target="hsgmain">单选题添加</a></td>
+                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
+                                this.style.borderStyle='solid';
+                                this.style.borderWidth='1px';
+                                borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';
+                                this.style.borderStyle='none'">
+                                    <a href="singlechoice_add.jsp" target="hsgmain">单选题添加</a>
+                                </td>
                             </tr>
                         </table></td>
                     </tr>
                 </table></td>
             </tr>
             <tr>
-                <td height="38"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <td height="38">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td width="33" height="28"><img src="images/search.png" width="23" height="23"></td>
                         <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"><a href="xuanzeti_list.jsp" target="hsgmain">单选题查询</a></td>
+                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
+                                this.style.borderStyle='solid';
+                                this.style.borderWidth='1px';
+                                borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';
+                                this.style.borderStyle='none'">
+                                    <a href="singlechoice_list.jsp" target="hsgmain">单选题查询</a>
+                                </td>
                             </tr>
                         </table></td>
                     </tr>
@@ -111,7 +136,13 @@
                     <td width="33" height="28"><img src="images/add.png" width="20" height="20"></td>
                     <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"><a href="duoxuanti_add.jsp" target="hsgmain">多选题添加</a></td>
+                            <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
+                            this.style.borderStyle='solid';
+                            this.style.borderWidth='1px';
+                            borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';
+                            this.style.borderStyle='none'">
+                                <a href="multiplechoice_add.jsp" target="hsgmain">多选题添加</a>
+                            </td>
                         </tr>
                     </table></td>
                 </tr>
@@ -124,10 +155,11 @@
                         <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                                 <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
-                                this.style.borderStyle='solid';this.style.borderWidth='1';
+                                this.style.borderStyle='solid';
+                                this.style.borderWidth='1px';
                                 borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';
                                 this.style.borderStyle='none'">
-                                <a href="duoxuanti_list.jsp" target="hsgmain">多选题查询</a>
+                                <a href="multiplechoice_list.jsp" target="hsgmain">多选题查询</a>
                                 </td>
                             </tr>
                         </table></td>
@@ -142,10 +174,11 @@
                             <tr>
                                 <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
                                 this.style.borderStyle='solid';
-                                this.style.borderWidth='1';borderColor='#adb9c2';
+                                this.style.borderWidth='1px';
+                                borderColor='#adb9c2';
                                 "onmouseout="this.style.backgroundImage='url()';
                                 this.style.borderStyle='none'">
-                                    <a href="panduanti_add.jsp" target="hsgmain">判断题添加</a>
+                                    <a href="judgement_add.jsp" target="hsgmain">判断题添加</a>
                                 </td>
                             </tr>
                         </table></td>
@@ -160,11 +193,11 @@
                             <tr>
                                 <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
                                 this.style.borderStyle='solid';
-                                this.style.borderWidth='1';
+                                this.style.borderWidth='1px';
                                 borderColor='#adb9c2';
                                 "onmouseout="this.style.backgroundImage='url()';
                                 this.style.borderStyle='none'">
-                                    <a href="panduanti_list.jsp" target="hsgmain">判断题查询</a>
+                                    <a href="judgement_list.jsp" target="hsgmain">判断题查询</a>
                                 </td>
                             </tr>
                         </table></td>
@@ -176,43 +209,31 @@
     <tr>
         <td height="22" valign="top"><table width="100%" border="0" style="cursor: pointer" onClick="collapse('g_3')">
             <tr>
-                <td height="18" background="images/main_34.gif">&nbsp;&nbsp;&nbsp;&nbsp;<span class="STYLE4">考生管理</span></td>
+                <td height="18" background="images/main_34.gif">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="STYLE4">考生管理</span>
+                </td>
             </tr>
         </table></td>
     </tr>
     <tr>
-        <td  valign="top" id="g_3"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <td  valign="top" id="g_3">
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
                 <td height="38"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td width="33" height="28"><img src="images/add.png" width="20" height="20"></td>
-                        <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <td width="33" height="28">
+                            <img src="images/add.png" width="20" height="20">
+                        </td>
+                        <td width="99">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                                 <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
                                 this.style.borderStyle='solid';
-                                this.style.borderWidth='1';borderColor='#adb9c2';
-                                "onmouseout="this.style.backgroundImage='url()';
-                                this.style.borderStyle='none'">
-                                    <a href="kaosheng_add.jsp" target="hsgmain">考生添加</a>
-                                </td>
-                            </tr>
-                        </table></td>
-                    </tr>
-                </table></td>
-            </tr>
-            <tr>
-                <td height="38"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td width="33" height="28"><img src="images/search.png" width="23" height="23"></td>
-                        <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tr>
-                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
-                                this.style.borderStyle='solid';
-                                this.style.borderWidth='1';
+                                this.style.borderWidth='1px';
                                 borderColor='#adb9c2';
                                 "onmouseout="this.style.backgroundImage='url()';
                                 this.style.borderStyle='none'">
-                                    <a href="kaosheng_list.jsp" target="hsgmain">考生查询</a>
+                                    <a href="user_add.jsp" target="hsgmain">考生添加</a>
                                 </td>
                             </tr>
                         </table></td>
@@ -225,7 +246,32 @@
                         <td width="33" height="28"><img src="images/search.png" width="23" height="23"></td>
                         <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"><a href="chengji2.jsp" target="hsgmain">考生成绩查询</a></td>
+                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
+                                this.style.borderStyle='solid';
+                                this.style.borderWidth='1px';
+                                borderColor='#adb9c2';
+                                "onmouseout="this.style.backgroundImage='url()';
+                                this.style.borderStyle='none'">
+                                    <a href="user_list.jsp" target="hsgmain">考生查询</a>
+                                </td>
+                            </tr>
+                        </table></td>
+                    </tr>
+                </table></td>
+            </tr>
+            <tr>
+                <td height="38"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="33" height="28"><img src="images/search.png" width="23" height="23"></td>
+                        <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
+                                this.style.borderStyle='solid';
+                                this.style.borderWidth='1px';
+                                borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';
+                                this.style.borderStyle='none'">
+                                    <a href="achievement.jsp" target="hsgmain">考生成绩查询</a>
+                                </td>
                             </tr>
                         </table></td>
                     </tr>
@@ -237,7 +283,9 @@
     <tr>
         <td height="22" valign="top"><table width="100%" border="0" style="cursor: pointer" onClick="collapse('g_4')">
             <tr>
-                <td height="18" background="images/main_34.gif">&nbsp;&nbsp;&nbsp;&nbsp;<span class="STYLE4">系统管理</span></td>
+                <td height="18" background="images/main_34.gif">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="STYLE4">系统管理</span>
+                </td>
             </tr>
         </table></td>
     </tr>
@@ -249,7 +297,13 @@
                         <td width="33" height="28"><img src="images/backup.png" width="21" height="21"></td>
                         <td width="99"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';this.style.borderStyle='solid';this.style.borderWidth='1';borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';this.style.borderStyle='none'"><a href="databack.jsp" target="hsgmain">数据备份</a></td>
+                                <td height="23" class="STYLE4" style="cursor:pointer" onMouseOver="this.style.backgroundImage='url(images/tab_bg.gif)';
+                                this.style.borderStyle='solid';
+                                this.style.borderWidth='1px';
+                                borderColor='#adb9c2'; "onmouseout="this.style.backgroundImage='url()';
+                                this.style.borderStyle='none'">
+                                    <a href="databack.jsp" target="hsgmain">数据备份</a>
+                                </td>
                             </tr>
                         </table></td>
                     </tr>
@@ -264,7 +318,9 @@
         <td height="29" background="images/main_69.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td width="16%">&nbsp;</td>
-                <td width="84%" valign="bottom"><span class="STYLE3">版本:2019 v1.0</span></td>
+                <td width="84%" valign="bottom">
+                    <span class="STYLE3">版本:2019 v1.0</span>
+                </td>
             </tr>
         </table></td>
     </tr>

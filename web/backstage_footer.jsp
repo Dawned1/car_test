@@ -12,10 +12,10 @@
     <title>后台管理主页底部</title>
     <style type="text/css">
         body {
-            margin-left: 0px;
+            /*margin-left: 0px;*/
             margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 0px;
+            /*margin-right: 0px;*/
+            /*margin-bottom: 0px;*/
         }
     </style>
 </head>

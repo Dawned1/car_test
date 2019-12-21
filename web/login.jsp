@@ -41,7 +41,7 @@
             <input type="password" name="password" placeholder="密码" required="" id="myInput" />
         </div>
         <div class="agile-field-txt">
-            <select name="role" id="roleId">
+            <select name="role" id="role">
                 <option value="角色" selected="selected" disabled="disabled">角色</option>
                 <option value="管理员">管理员</option>
                 <option value="考生">考生</option>
